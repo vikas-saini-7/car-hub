@@ -2,11 +2,16 @@
 import React from 'react'
 import Image from 'next/image';
 import { CustomButton } from '.';
+import { useRouter } from 'next/navigation'
 
 const Hero = () => {
-    const handleScroll = () => {
+    
+    const router = useRouter();
 
+    const handleScroll = () => {
+        router.push('#discover');
     }
+
   return (
     <div className='hero'>
         <div className='flex-1 pt-36 padding-x'>
